@@ -1,7 +1,5 @@
-﻿using System;
-using Unity.Mathematics;
+﻿using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
 using static UnityEngine.Screen;
 using Random = UnityEngine.Random;
 
@@ -18,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private float _screenWidthWorldPoints;
     private float _tiltAngle= 0.5f;
     private float _tiltThreshHold;
-    
+
 
 
 
@@ -156,6 +154,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("meteor"))
         {
+             
+            AdsManager.Instance.PlayInterstitialAd();
             GameManager.instance.showGameOverScreen();
             GameManager.instance.increaseScore = false;
             explosionAudio.pitch = Random.Range(0.5f,1f);

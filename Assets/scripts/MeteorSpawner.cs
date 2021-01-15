@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Resources;
-using System.Runtime.Serialization;
+﻿
 using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour
